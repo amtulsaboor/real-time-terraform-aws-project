@@ -70,20 +70,6 @@ resource "aws_s3_bucket" "example" {
   bucket = "20may-terraform-aws-project"
 }
 
-resource "aws_s3_bucket_public_access_block" "example1" {
-  bucket = aws_s3_bucket.example.id
-
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
-}
-
-
-resource "aws_s3_bucket_acl" "example2" {
-  bucket = aws_s3_bucket.example.id
-  acl    = "public-read"
-}
 
 resource "aws_instance" "webserver1" {
   ami           = var.ami
@@ -101,6 +87,57 @@ resource "aws_instance" "webserver2" {
   user_data = base64encode(file("userdata2.sh"))
 }
 
+#create alb
+resource "aws_lb" "myalb" {
+  name               = "myalb"
+  internal           = false
+  load_balancer_type = "application"
 
+  security_groups = [aws_security_group.webSg.id]
+  subnets         = [aws_subnet.sub1.id, aws_subnet.sub2.id]
+
+  tags = {
+    Name = "web"
+  }
+}
+
+resource "aws_lb_target_group" "tg" {
+  name     = "myTG"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.myvpc.id
+
+  health_check {
+    path = "/"
+    port = "traffic-port"
+  }
+}
+
+resource "aws_lb_target_group_attachment" "attach1" {
+  target_group_arn = aws_lb_target_group.tg.arn
+  target_id        = aws_instance.webserver1.id
+  port             = 80
+}
+
+resource "aws_lb_target_group_attachment" "attach2" {
+  target_group_arn = aws_lb_target_group.tg.arn
+  target_id        = aws_instance.webserver2.id
+  port             = 80
+}
+
+resource "aws_lb_listener" "listener" {
+  load_balancer_arn = aws_lb.myalb.arn
+  port              = 80
+  protocol          = "HTTP"
+
+  default_action {
+    target_group_arn = aws_lb_target_group.tg.arn
+    type             = "forward"
+  }
+}
+
+output "loadbalancerdns" {
+  value = aws_lb.myalb.dns_name
+}
 
 

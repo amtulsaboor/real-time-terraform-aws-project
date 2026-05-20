@@ -1,5 +1,6 @@
 # Setting Up Infrastucture On AWS Using Terraform  
-<img width="800" height="457" alt="Setting up Infrastructure on AWS using Terraform" src="https://github.com/user-attachments/assets/ed110866-6754-4083-852b-e4f126f29411" />
+<img width="1280" height="730" alt="PHOTO-2026-05-20-16-30-24" src="https://github.com/user-attachments/assets/565a73a1-5d5f-4786-aad7-dfa61adb6cef" />
+
 
 ## 📌 Project Overview
 

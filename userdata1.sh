@@ -1,15 +1,14 @@
 #!/bin/bash
 apt update
 apt install -y apache2
-
-# Get the instance ID using the instance metadata
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-
-# Install the AWS CLI
 apt install -y awscli
 
-# Download the images from S3 bucket
-#aws s3 cp s3://myterraformprojectbucket2023/project.webp /var/www/html/project.png --acl public-read
+# IMDSv2 token
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+INSTANCE_ID=`curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id`
+
+# Now this works because IAM role is attached
+aws s3 cp s3://20may-terraform-aws-project/project.webp /var/www/html/project.png
 
 # Create a simple HTML file with the portfolio content and display the images
 cat <<EOF > /var/www/html/index.html

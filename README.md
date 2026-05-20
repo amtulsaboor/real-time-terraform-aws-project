@@ -22,22 +22,6 @@ The main goal of this project is to understand how real-world infrastructure is 
 
 ---
 
-# 🏗️ Architecture Diagram
-
-![Image](https://images.openai.com/static-rsc-4/CJ-vXgX5l66XPNLt9dMGA2lpGze21jAgCNznvM30znl1y58sUcoNqrG5dsXIz-d15YPextBVt82V5pC6JiFvi2KphP7l4L_pxVLiAH_xvxNkG5-P5HUlbxBSOcI8d--41wNf0kk6JxpbP0BpMKtM2DPeJB69u8Lf0frDv0K0Qfwu5rrk6oW-_MBtu237BjeC?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/PopWQHG5fGk259ju6lm0dedLZioL1qPaC937wkDPOgzvUUCFBW75EbUkCqMZM6nN5IhbIuhuzgwCRk5alSjY_jFF7dJCpD-F7wVl3OGX8kIcx-9Z5sY28jX084X2HHxKrFsvCJjKCoYa0Tg-BcWBOTtmCqvRk6PShAKaEe9LB7texvk5JZLSqrdtGXNnCm7l?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/Ywwa-5JAXtoCr73OrVgGNlWJGQJj9eLGORo4dKx4g23dkVm7ux-DEs9UsgTwkXbLoMNkAATsIaQAI8F6zATUwWM3E17KYQYc66aSA8wfmCDNyBJTbeDR__pI5t0lUAdnxZdhBR4ZEBHmcp37xNCZ0hf2l1U2Zt3k2hmaSSEIHn6PzLks0JHHc49njPW3pkhW?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/PFjX0Le9vixOaLhsuP7sbS7bxx7ECKByZZWTOUCsfTOeJkisxYf_YhueLBVl4cMu3iMjHQCD6kZP1Y0GWB_3l03Y5bf8Exev6SvxqONFhPuFQwpgL0TLsoNwpzYwBZ4ntNFipzZprhZmMHxkbkfkQ5y2aAeI4qnmI1d-u2Cl994GDnBmclt6R0bOznYiUIXS?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/H2JCeNjXS3qHrDVhcgEjDtt8Hz41-NNm9zh6B1GAQ-pYDHXYIXZwT2yIZ8wMsVcm0UakTuwDQru7gc8uurw08U_soz5Jkpf9JFfmm3qW0acuzFR5Aa9AUafZ6NbNL7ZFUKXS5W9oXPDny3qTRxseOJ_X0CrgIXVD5M3DM7Tee9Xh5cCMHjRdAclOqGOXE8PT?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/7Vznj1kta3JxfSJ_yltcnnHpt1Xrd69KYXLcaFoHmmOH5NY9T3Ev4rZPsT89rEM0Z3UGsJs91jX6MRjnwBgKqsokLrRYBmnLFmk_S6gl8SduaNskChXSxvJ05L60iEozshJYdfL4pL9CHvyUj5cAfV2Sj73hrkhgnE2LQGPigFuxYVADZ6yRq7QYiGqkhXot?purpose=fullsize)
-
----
-
 # ⚙️ Prerequisites
 
 Before starting the project install Terraform and AWS CLI.

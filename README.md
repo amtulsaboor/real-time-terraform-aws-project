@@ -648,6 +648,7 @@ After project completion destroy the infrastructure to avoid AWS charges.
 ```bash
 terraform destroy
 ```
+<img width="1710" height="1107" alt="Screenshot 2026-05-20 at 4 21 57 PM" src="https://github.com/user-attachments/assets/be3c0808-797a-4011-b464-2e65db76f826" />
 
 ---
 Amtul Saboor

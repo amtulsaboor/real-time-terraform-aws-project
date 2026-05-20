@@ -2,6 +2,10 @@
 <img width="1280" height="730" alt="PHOTO-2026-05-20-16-30-24" src="https://github.com/user-attachments/assets/565a73a1-5d5f-4786-aad7-dfa61adb6cef" />
 
 
+https://github.com/user-attachments/assets/15ad3be8-7e17-464a-970a-de096aa26335
+
+
+
 ## 📌 Project Overview
 
 In this project we are going to create a complete AWS infrastructure using Terraform.
